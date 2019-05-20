@@ -1,26 +1,45 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';import logo from './logo.svg';
 import './App.css';
+import PieChart from './PieChart';
+//import FrequencyChart from './BarChart';
+import CustomTable from './table';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  render() {
+
+
+    return (
+      <div>
+<div>
+
+  {/* <div> This is a test</div> */}
+      <svg >
+        <PieChart />
+
+      </svg>
+      <svg >
+        <PieChart />
+
+      </svg>
+      <svg >
+        <PieChart />
+
+      </svg>
+      <div>
+        <CustomTable />
+      </div>
+</div>
+</div>
+
+    
+    );
+  }
 }
 
-export default App;
+// ReactDOM.render(
+//   // App takes one prop: the pie chart data as an array of values
+//   <App data={[5, 2, 7, 1, 1, 3, 4, 9]} />,
+//   document.getElementById('app')
+// );
+export default App
